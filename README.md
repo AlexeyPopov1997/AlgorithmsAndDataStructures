@@ -1,5 +1,5 @@
 # Algorithms and Data Structures
-Implementation of practical tasks of the course **[Algorithms: Theory and Practice](https://stepik.org/course/217/syllabus)** from **[Computer Science Center](https://stepik.org/org/compscicenter)**
+Implementation of practical tasks of the courses **[Algorithms: Theory and Practice](https://stepik.org/course/217/syllabus)** and **[Algorithms: Data Structures](https://stepik.org/course/1547/syllabus)** from **[Computer Science Center](https://stepik.org/org/compscicenter)**
 
 ## Algorithms  
 ### 1. Task 1 - Fibonacci Numbers

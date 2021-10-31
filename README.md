@@ -3,6 +3,6 @@ Implementation of practical tasks of the courses **[Algorithms: Theory and Pract
 
 ## Algorithms  
 ### 1. Task 1 - Fibonacci Numbers
-[![Button](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/develop/open_dir_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/FibonacciNumbers)
+[![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/develop/open_dir_image.png?raw=true)
 ### 2. Task 2 - Euclide Algorithm (Greatest Common Divider)
-[![Button](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/develop/open_dir_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/EuclideAlgorithm)
+[![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/develop/open_dir_image.png?raw=true)

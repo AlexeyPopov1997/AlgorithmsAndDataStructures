@@ -3,7 +3,7 @@ Implementation of practical tasks of the courses **[Algorithms: Theory and Pract
 
 The assignments were performed in the **C ++** and **Python** programming languages. During the execution of the tasks, gaps in knowledge of these programming languages were found, these gaps were eliminated and displayed in **[C ++ Reference Book](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/C%20%2B%2B%20Reference%20Book.md)** and **[Python Reference Book](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Python%20Reference%20Book.md)** (*Reference Books in Russian*).
 
-#### Используемые материалы:
+#### Используемые ресурсы:
 1) [ravesli.com](https://ravesli.com/)
 2) Чистый Puthon (Дэн Бейдер)
 3) [pythonworld.ru](https://pythonworld.ru/)

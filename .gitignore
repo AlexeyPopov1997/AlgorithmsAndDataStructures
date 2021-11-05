@@ -1,2 +1,5 @@
+# Visual Studio Code Folders
+.vscode
+
 # Binary Files
 *.exe

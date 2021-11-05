@@ -1,32 +1,41 @@
-#include <iostream>
-#include <utility>
 #include <vector>
+#include <iostream>
+#include <bits/stdc++.h>
 
 using Segment = std::pair<int, int>;
 
-std::vector <int> get_covering_set(std::vector <Segment> segments) {
-  std::vector <int> result;
+// Comprator
+bool sortBySecondValue(const std::pair<int,int> &firstElement, const std::pair<int,int> &secondElement) {
+    return (firstElement.second < secondElement.second);
+}
 
-  // fix this function
-  for (auto s : segments) {
-    result.push_back(s.second);
+// Points Covering
+std::vector <int> getCoveringSet(std::vector <Segment> segments) {
+  std::vector <int> points;
+
+  std::sort(segments.begin(), segments.end(), sortBySecondValue);
+
+  for (auto segment : segments) {
+    if (points.empty() or (segment.first > points.back())) {
+      points.push_back(segment.second);
+    }
   }
 
-  return result;
+  return points;
 }
 
 int main(void) {
-  int segments_count;
-  std::cin >> segments_count;
-  std::vector <Segment> segments(segments_count);
-  for (auto &s:segments) {
-    std::cin >> s.first >> s.second;
+  int segmentsCount;
+  std::cin >> segmentsCount;
+  std::vector <Segment> segments(segmentsCount);
+  for (auto &segment:segments) {
+    std::cin >> segment.first >> segment.second;
   }
 
-  auto points = get_covering_set(std::move(segments));
+  auto points = getCoveringSet(std::move(segments));
   std::cout << points.size() << std::endl;
   for (auto point:points) {
-    std::cout << point << " ";
+    std::cout << point << '\t';
   }
   std::cout << std::endl;
 }

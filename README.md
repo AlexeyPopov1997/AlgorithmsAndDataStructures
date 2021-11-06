@@ -9,9 +9,11 @@ The assignments were performed in the **C ++** and **Python** programming langua
 3) [pythonworld.ru](https://pythonworld.ru/)
 4) [tirinox.ru](https://tirinox.ru/)
 ## Algorithms  
+### *Introduction*
 ### 1. Task 1 - Fibonacci Numbers
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/FibonacciNumbers)
 ### 2. Task 2 - Euclide Algorithm (Greatest Common Divider)
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/EuclideAlgorithm)
+### *Eager Algorithms*
 ### 3. Task 3 - Points Cover
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/PointsCover)

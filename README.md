@@ -17,3 +17,5 @@ The assignments were performed in the **C ++** and **Python** programming langua
 ### *Eager Algorithms*
 ### 3. Task 3 - Points Cover
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/PointsCover)
+### 4. Task 4 - Knapsack
+[![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/Knapsack)

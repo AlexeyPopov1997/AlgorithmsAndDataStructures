@@ -1,20 +1,23 @@
-#include <cassert>
-#include <cstdint>
-#include <iostream>
 #include <vector>
+#include <iostream>
+#include <algorithm> 
 
 struct Item final {
   int weight;
   int value;
 };
 
+bool sortByItemProfit(const Item &firstItem, const Item &secondItem) {
+  return static_cast<std::int64_t>(firstItem.weight) * secondItem.value < static_cast<std::int64_t>(secondItem.weight) * firstItem.value;
+}
+
 double getMaxKnapsackValue(int capacity, std::vector <Item> items) {
+  std::sort(items.begin(), items.end(), sortByItemProfit);
+  
   double value = 0.0;
 
-  // take items while there is empty space in knapsack
   for (auto &item:items) {
     if (capacity > item.weight) {
-      // can take full item and continue
       capacity -= item.weight;
       value += item.value;
     } else {

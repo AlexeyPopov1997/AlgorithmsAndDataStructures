@@ -1,0 +1,3 @@
+# Различные слагаемые
+
+По данному числу <img src="https://render.githubusercontent.com/render/math?math=1 ≤ n ≤ 10^9"> найдите максимальное число <img src="https://render.githubusercontent.com/render/math?math=k">, для которого nn можно представить как сумму <img src="https://render.githubusercontent.com/render/math?math=k"> различных натуральных слагаемых. Выведите в первой строке число <img src="https://render.githubusercontent.com/render/math?math=k">, во второй — <img src="https://render.githubusercontent.com/render/math?math=k"> слагаемых.

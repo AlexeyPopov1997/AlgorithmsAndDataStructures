@@ -3,3 +3,5 @@
 
 # Binary Files
 *.exe
+*.out
+*.a

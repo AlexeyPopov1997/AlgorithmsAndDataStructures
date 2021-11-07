@@ -14,7 +14,7 @@ The assignments were performed in the **C ++** and **Python** programming langua
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/FibonacciNumbers)
 ### 2. Task 2 - Euclide Algorithm (Greatest Common Divider) ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Algorithms/EuclideAlgorithm/Task%20Description.md))
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/EuclideAlgorithm)
-### *Eager Algorithms*
+### Greedy Algorithms*
 ### 3. Task 3 - Points Cover ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Algorithms/PointsCover/Task%20Description.md))
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/PointsCover)
 ### 4. Task 4 - Fractional Knapsack ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Algorithms/FractionalKnapsack/Task%20Description.md))

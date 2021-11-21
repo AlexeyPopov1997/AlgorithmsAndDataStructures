@@ -21,3 +21,5 @@ The assignments were performed in the **C ++** and **Python** programming langua
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/FractionalKnapsack)
 ### 5. Task 5 - Different Addends ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/develop/Algorithms/DifferentAddends/Task%20Description.md))
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/develop/Algorithms/DifferentAddends)
+### 6. Task 6 - Huffman Coding ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/develop/Algorithms/Huffman%20Coding/Task%20Description.md))
+[![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/develop/Algorithms/Huffman%20Coding)

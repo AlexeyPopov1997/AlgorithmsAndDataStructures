@@ -1,98 +1,134 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-#include <algorithm>
-#include <cassert>
+#include <queue>
 
-class Huffman {
-    struct CharFrequency
-    {
-        char ch;
+class Huffman{
+    struct SymbolSetFrequency {
+        std::string symbolSet;
         int frequency;
 
-        bool operator < (const CharFrequency &other) const {
-            return std::tie(frequency, ch) > std::tie(other.frequency, other.ch);
+        bool operator < (const SymbolSetFrequency &otherSet) const {
+            return std::tie(frequency, symbolSet) > std::tie(otherSet.frequency, otherSet.symbolSet);
         }
     };
 
-    // Input array must be sorted by frequency
-    // Sum of all frequencies must be passed in total_frequency
-    static std::unordered_map<char, std::string> shannon_fano_encode(const std::vector<CharFrequency> &frequencies, int totalFrequency) {
-        size_t size = frequencies.size();
-        std::unordered_map<char, std::string> result;
-        if (size <= 1) {
-            for (auto &frequency:frequencies) {
-                result[frequency.ch] = "";
-            }
-            return std::move(result);
+public:
+    static std::unordered_map<char, std::string> encode(const std::string &inputCode) {
+        std::unordered_map<char, int> symbolFrequencies;
+        for (auto symbol : inputCode) {
+            symbolFrequencies[symbol]++;
         }
 
-        // Greedy split frequencies into two parts with approximately equal total frequency
-        size_t splitPosition;
-        int firstPartFrequency = 0;
-        for (splitPosition = 0; splitPosition < size; splitPosition++) {
-            int currentFrequency = frequencies[splitPosition].frequency;
-            if (firstPartFrequency >= totalFrequency - (firstPartFrequency + currentFrequency)) {
-                // Adding current character increases difference between part frequencies
-                break;
-            }
-            firstPartFrequency += currentFrequency;
+        std::vector<SymbolSetFrequency> frequencies;
+        for (auto symbolFrequency : symbolFrequencies) {
+            frequencies.push_back({std::string(1, symbolFrequency.first), symbolFrequency.second});
         }
-        assert(splitPosition <= size);
 
-        // Merge part results
-        for (auto &encoded:shannon_fano_encode({frequencies.begin(), frequencies.begin() + splitPosition}, firstPartFrequency)) {
-            result[encoded.first] = "0" +encoded.second;
+        if (frequencies.size() == 1) {
+            std::unordered_map<char, std::string> outputCode;
+            outputCode[frequencies[0].symbolSet[0]] = "0";
+            return outputCode;
         }
-        for (auto &encoded:shannon_fano_encode({frequencies.begin() + splitPosition, frequencies.end()}, totalFrequency - firstPartFrequency)) {
-            result[encoded.first] = "1" +encoded.second;
+
+        std::unordered_map<char, std::string> outputCode;
+        std::priority_queue<SymbolSetFrequency> queue(frequencies.begin(), frequencies.end());
+        while (queue.size() >= 2) {
+            auto first = queue.top();
+            queue.pop();
+
+            auto second = queue.top();
+            queue.pop();
+
+            for (auto symbol : first.symbolSet) {
+                outputCode[symbol] = "0" + outputCode[symbol];
+            }
+
+            for (auto symbol : second.symbolSet) {
+                outputCode[symbol] = "1" + outputCode[symbol];
+            }
+
+            queue.push({first.symbolSet + second.symbolSet, first.frequency + second.frequency});
         }
-        return std::move(result);
+        return outputCode;
     }
 
-    public:
-        static std::unordered_map<char, std::string> encode(const std::string &inputText) {
-            std::unordered_map<char, int> char_frequencies;
-            for (auto ch:inputText) {
-                char_frequencies[ch]++;
+    static std::string decode(const std::string &inputCode, const std::unordered_map<std::string, char> &decodingDescpiption) {
+        std::string currentCode;
+        std::string outputCode = "";
+        for (auto ch: inputCode) {
+            currentCode += ch;
+            if(decodingDescpiption.find(currentCode) != decodingDescpiption.end()) {
+                outputCode += decodingDescpiption.at(currentCode);
+                currentCode.erase();
             }
+        }
+        return outputCode;
+    }
 
-            std::vector<CharFrequency> frequencies;
-            for (auto char_frequency:char_frequencies) {
-                frequencies.push_back({char_frequency.first, char_frequency.second});
-            }
-            std::sort(frequencies.begin(), frequencies.end());
+    static std::pair<std::string, char> getDecodingDescpiption(std::string line, std::string delimiter) {
+        char letter;
+        std::string code;
 
-            if (frequencies.size() == 1) {
-                // Cannot return empty encoding so this case need to be considered separately
-                std::unordered_map<char, std::string> result;
-                result[frequencies[0].ch] = '0';
-                return result;
-            }
+        auto start = 0U;
+        auto end = line.find(delimiter);
 
-            return shannon_fano_encode(std::move(frequencies), static_cast<int>(inputText.size()));
+        while (end != std::string::npos) {
+            letter = line.substr(start, end - start)[0];
+            start = end + delimiter.length();
+            end = line.find(delimiter, start);
         }
 
-        static std::string decode(const std::string &inputText, const std::unordered_map<char, std::string> &encodedText) {
-
-        }
+        code = line.substr(start, end);
+        
+        return {code, letter};
+    }
 };
 
-int main() {
-    std::string inputText;
-    std::cin >> inputText;
+int main(){
+    const std::string MODE = "DECODING"; // "ENCODING" or "DECODING"
 
-    auto encoding = Huffman::encode(inputText);
+    if (MODE == "ENCODING") {
+        std::string inputCode;
+        std::cin >> inputCode;
 
-    std::string encodedText;
-    for (auto ch:inputText) {
-        encodedText += encoding[ch];
+        auto encodingDescription = Huffman::encode(inputCode);
+
+        std::string outputCode;
+        for (auto symbol : inputCode) {
+            outputCode += encodingDescription[symbol];
+        }
+
+        std::cout << encodingDescription.size() << " " << outputCode.size() << std::endl;
+        
+        for (auto &encoded : encodingDescription){
+            std::cout << encoded.first << ": " << encoded.second << std::endl;
+        }
+        std::cout << outputCode << std::endl;
+    } else {
+        int lettersNum;
+        int lineLength;
+
+        std::cin >> lettersNum >> lineLength;
+
+        std::unordered_map<std::string, char> decodingDescription;
+
+        for (int i = 0; i <= lettersNum; i++) {
+            std::string line;
+            std::getline(std::cin, line);
+            char letter;
+            std::string code;
+            if (!line.empty()) {
+                std::tie(code, letter) = Huffman::getDecodingDescpiption(line, ": ");
+                decodingDescription.insert(std::pair<std::string, char>(code, letter));
+            }
+        }
+
+        std::string inputCode;
+        std::cin >> inputCode;
+
+        std::cout << Huffman::decode(inputCode, decodingDescription) << std::endl;
     }
-    std::cout << encoding.size() << ' ' << encodedText.size() << std::endl;
-    for (auto &encoded: encoding) {
-        std::cout << encoded.first << ": " << encoded.second << std::endl;
-    }
-    std::cout << encodedText << std::endl;
 
     return 0;
 }

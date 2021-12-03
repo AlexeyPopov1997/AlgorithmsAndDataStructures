@@ -1,6 +1,6 @@
 # Очередь с приоритетами
 
-Первая строка входа содержит число операций <img src="https://render.githubusercontent.com/render/math?math=1 ≤ n ≤ 10^5">. Каждая из последующих nn строк задают операцию одного из следующих двух типов:
+Первая строка входа содержит число операций <img src="https://render.githubusercontent.com/render/math?math=1 ≤ n ≤ 10^5">. Каждая из последующих *n* строк задают операцию одного из следующих двух типов:
 
 * `Insert x`, где <img src="https://render.githubusercontent.com/render/math?math=0 ≤ x ≤ 10^9"> - цедое число;
 * `ExtractMax`.

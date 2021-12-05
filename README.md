@@ -2,7 +2,7 @@
 Implementation of practical tasks of the courses **[Algorithms: Theory and Practice](https://stepik.org/course/217/syllabus)** and **[Algorithms: Data Structures](https://stepik.org/course/1547/syllabus)** from **[Computer Science Center](https://stepik.org/org/compscicenter)**.
 
 
-The tasks were carried out in the programming languages **C ++** and **Python**. In the process of completing the tasks, gaps in knowledge of these programming languages were discovered (these gaps were eliminated and displayed in the **[C ++ Reference](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/C%20%2B%2B%20Reference%20Book.md)** and **[Python Reference](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Python%20Reference%20Book.md)** (*References in Russian*)) and basic principles such as **[SOLID Principles]()**.  
+The tasks were carried out in the programming languages **C ++** and **Python**. In the process of completing the tasks, gaps in knowledge of these programming languages were discovered (these gaps were eliminated and displayed in the **[C ++ Reference](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/C%20%2B%2B%20Reference%20Book.md)** and **[Python Reference](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Python%20Reference%20Book.md)** (*References in Russian*)) and basic principles such as **[SOLID Principles](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/SOLID%20Principles.md)**.  
 
 #### Используемые ресурсы:
 1) [ravesli.com](https://ravesli.com/)

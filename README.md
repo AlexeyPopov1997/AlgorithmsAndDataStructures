@@ -26,3 +26,5 @@ The tasks were carried out in the programming languages **C ++** and **Python**.
 ### *Divide and Conquer*
 ### 8. Task 8 - Binary Search Algorithm ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Algorithms/BinarySearch/Task%20Description.md))
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/BinarySearch)
+### 9. Task 9 - Merge Sort ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Algorithms/MergeSort/Task%20Description.md))
+[![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/MergeSort)

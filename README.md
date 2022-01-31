@@ -30,3 +30,5 @@ The tasks were carried out in the programming languages **C ++** and **Python**.
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/MergeSort)
 ### 10. Task 10 - Quick Sort ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Algorithms/QuickSort/Task%20Description.md))
 [![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/QuickSort)
+### 11. Task 11 - Count Sort ([Task Description](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/blob/master/Algorithms/CountSort/Task%20Description.md))
+[![Button](https://github.com/AlexeyPopov1997/MachineLearningCource/blob/master/open_project_image.png?raw=true)](https://github.com/AlexeyPopov1997/AlgorithmsAndDataStructures/tree/master/Algorithms/CountSort)

@@ -2,21 +2,18 @@ namespace BinarySearch
 {
     public static class BinarySearch
     {
-        public static (int, List<int>) ParseLine(this string input)
+        public static List<int> ParseLine(this string input)
         {
             List<int> list = new();
             
-            if (!String.IsNullOrEmpty(input))
-            {
-                string[] chars = input.Split(' ');
+            string[] chars = input.Split(' ');
                 
-                for(int i = 1; i < chars.Length; i++)
-                {
-                    list.Add(int.Parse(chars[i]));
-                }
+            for(int i = 1; i < chars.Length; i++)
+            {
+                list.Add(int.Parse(chars[i]));
             }
 
-            return (list.Count, list);
+            return list;
         }
 
         public static int GetPosition(List<int> numbers, int number)
@@ -49,12 +46,12 @@ namespace BinarySearch
         public static void Main()
         {
             string? input = Console.ReadLine();
-            (int numbersCount, List<int> numbers) = input.ParseLine();
+            List<int> numbers = input.ParseLine();
             
             numbers.Sort();
 
             input = Console.ReadLine();
-            (int queryCount, List<int> query) = input.ParseLine();
+            List<int> query = input.ParseLine();
 
             query.ForEach(x => Console.Write("{0} ", GetPosition(numbers, x)));
         }

@@ -2,7 +2,7 @@
 Implementation of practical tasks of the courses **[Algorithms: Theory and Practice](https://stepik.org/course/217/syllabus)** and **[Algorithms: Data Structures](https://stepik.org/course/1547/syllabus)** from **[Computer Science Center](https://stepik.org/org/compscicenter)**.
 
 
-The tasks were carried out in the programming languages **C ++** and **Python**.
+The tasks were carried out in the programming languages **C ++**, **C #** and **Python**.
   
 ## Algorithms  
 
